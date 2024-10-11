@@ -2,6 +2,7 @@ package LinkedList;
 
 public class Leet1_203 {
     public static void main(String[] args) {
+            // 返回 3
 
     }
 
@@ -27,6 +28,23 @@ public class Leet1_203 {
                 }
             }
             return head;
+
+        }
+    }
+
+    static class Solution2 {
+        public ListNode removeElements(ListNode head, int val) {
+            ListNode dummyhead = new ListNode();
+            dummyhead.next = head;
+            ListNode cur = dummyhead;
+            while(cur != null&&cur.next != null) {
+                if (cur.next.val == val) {
+                    cur.next = cur.next.next;
+                } else {
+                    cur = cur.next;
+                }
+            }
+            return dummyhead.next;
 
         }
     }
