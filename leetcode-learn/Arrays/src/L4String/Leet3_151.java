@@ -5,37 +5,37 @@ public class Leet3_151 {
 
     }
 
-    static class Solution {
-        public String reverseWords(String s) {
-            char[] ch = s.toCharArray();
+//    static class Solution1 {
+//        public String reverseWords(String s) {
+//            char[] ch = s.toCharArray();
+//
+//            for(int fast = 0; fast < s.length(); fast++){
+//                if(ch[fast] != ' ') {
+//                    if(slow != 0) {
+//                        ch[slow] = ' ';
+//                        slow++;
+//                    }
+//                    while(fast < s.length() && ch[fast] != ' '){
+//                        ch[slow] = ch[fast];
+//                        slow++;
+//                        fast++;
+//                    }
+//                }
+//            }
+//
+//            for(int slow = 0; slow < s.length() / 2; slow++) {
+//                char temp = ch[slow];
+//                ch[slow] = ch[fast];
+//                ch[fast] = temp;
+//                fast--;
+//            }
+//
+//            return new String(ch);
+//
+//        }
+//    }
 
-            for(int fast = 0; fast < s.length(); fast++){
-                if(ch[fast] != ' ') {
-                    if(slow != 0) {
-                        ch[slow] = ' ';
-                        slow++;
-                    }
-                    while(fast < s.length() && ch[fast] != ' '){
-                        ch[slow] = ch[fast];
-                        slow++;
-                        fast++;
-                    }
-                }
-            }
-
-            for(int slow = 0; slow < s.length() / 2; slow++) {
-                char temp = ch[slow];
-                ch[slow] = ch[fast];
-                ch[fast] = temp;
-                fast--;
-            }
-
-            return new String(ch);
-
-        }
-    }
-
-    static class Solution {
+    static class Solution2 {
         public String reverseWords(String s) {
             char[] ch = s.toCharArray();
 
