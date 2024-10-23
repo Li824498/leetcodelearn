@@ -1,6 +1,6 @@
 package L9DP;
 
-public class Leet10_474 {
+public class Leet11_474 {
     public static void main(String[] args) {
 
     }
