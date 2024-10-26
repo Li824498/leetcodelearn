@@ -1,6 +1,6 @@
 package L9DP;
 
-public class Lett21_122 {
+public class Leet21_122 {
     public static void main(String[] args) {
 
     }
