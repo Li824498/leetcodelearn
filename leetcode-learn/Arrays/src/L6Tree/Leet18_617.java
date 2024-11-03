@@ -1,6 +1,6 @@
 package L6Tree;
 
-public class Leet18_700 {
+public class Leet18_617 {
     public static void main(String[] args) {
 
     }
