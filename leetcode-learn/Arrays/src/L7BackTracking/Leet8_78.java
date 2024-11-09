@@ -19,7 +19,7 @@ public class Leet8_78 {
         public void backtracking(int[] nums, int startIndex) {
             result.add(new ArrayList<>(path));
 
-            if(startIndex >= nums.length) return;
+//            if(startIndex >= nums.length) return;
 
             for(int i = startIndex; i < nums.length; i++){
                 path.add(nums[i]);
