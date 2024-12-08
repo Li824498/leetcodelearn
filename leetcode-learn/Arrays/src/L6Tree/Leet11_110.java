@@ -46,4 +46,21 @@ public class Leet11_110 {
             this.right = right;
         }
     }
+
+    static class Solution2 {
+        public boolean isBalanced(TreeNode root) {
+            return traversal(root) != -1;
+        }
+
+        public int traversal(TreeNode root) {
+            if(root == null) return 0;
+
+            int left = traversal(root.left);
+            int right = traversal(root.right);
+            if(left == -1 || right == -1) return -1;
+            if(Math.abs(left - right) > 1) return -1;
+
+            return Math.max(left, right) + 1;
+        }
+    }
 }
