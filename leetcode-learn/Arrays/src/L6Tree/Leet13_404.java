@@ -5,11 +5,24 @@ public class Leet13_404 {
 
     }
     static class Solution {
+        int result = 0;
         public int sumOfLeftLeaves(TreeNode root) {
-            return traversal(root);
+            traversal(root);
+            return result;
         }
 
-        public int traversal(TreeNode root){
+
+        public void traversal(TreeNode root) {
+            if(root == null) return;
+            if(root.left != null && root.left.left == null && root.left.right == null) {
+                result += root.left.val;
+            }
+
+            traversal(root.left);
+            traversal(root.right);
+        }
+
+/*        public int traversal(TreeNode root){
             if(root == null) return 0;
             if(root.left == null && root.right == null) return 0;
 
@@ -19,7 +32,7 @@ public class Leet13_404 {
             if(root.left != null && root.left.left == null && root.left.right == null) midvalue = root.left.val;
             int sum = leftNum + rightNum + midvalue;
             return sum;
-        }
+        }*/
 
 
     }
